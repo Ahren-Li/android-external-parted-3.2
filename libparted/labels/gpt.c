@@ -762,7 +762,7 @@ _parse_header (PedDisk *disk, const GuidPartitionTableHeader_t *gpt,
 
   if (last_usable < last_usable_if_grown)
     {
-      PedExceptionOption q;
+      /*PedExceptionOption q;
 
       q = ped_exception_throw
         (PED_EXCEPTION_WARNING,
@@ -773,7 +773,7 @@ _parse_header (PedDisk *disk, const GuidPartitionTableHeader_t *gpt,
            "current setting? "), disk->dev->path,
          (uint64_t) (last_usable_if_grown - last_usable));
 
-      if (q == PED_EXCEPTION_FIX)
+      if (q == PED_EXCEPTION_FIX)*/
         {
           last_usable = last_usable_if_grown;
           /* clear the old backup gpt header */
